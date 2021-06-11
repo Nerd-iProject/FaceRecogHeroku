@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recognized Image</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/recognized_image.css') }}">
+</head>
+<body>
+    <form action="{{url_for('upload')}}" method="POST" enctype="multipart/form-data">
+        <!--<img src="{{url_for('static',filename=image_name)}} " onerror="this.onerror=null;this.src='static/image/no-img.png';">
+        <h1>The recognized person is:  <b>{{person_name}}</b></h1>-->
+
+        <a href="#" class="photo">
+            <h1>Hi, I am {{person_name}}</h1>
+                <img src="{{url_for('static',filename=image_name)}} " onerror="this.onerror=null;this.src='static/image/no-img.png';">
+            <div class="glow-wrap">
+                <i class="glow"></i>
+            </div>
+        </a>
+    </form>
+    
+</body>
+</html>
